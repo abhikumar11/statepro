@@ -1,8 +1,11 @@
-import React from 'react'
+import { useState } from "react"
 
 const App = () => {
+  const [title,setTitle]=useState("abhishek")
   return (
-    <div>App</div>
+    <div>
+      <h1>App-{title}</h1>
+      </div>
   )
 }
 
