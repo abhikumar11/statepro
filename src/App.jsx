@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Counter from "./components/counter"
+import ColourChanger from "./components/ColourChanger"
 
 const App = () => {
   const [title,setTitle]=useState("abhishek")
@@ -14,12 +15,7 @@ const App = () => {
   }
   return (
     <div>
-      <h1>My name is {title} and my age is {age}</h1>
-      <h2>Contact No-{contact}</h2>
-      <button onClick={fun}>Change Name</button>
-      <button onClick={fun2}>Change Age</button>
-      <button onClick={()=>setContact(9876543210)}>Change Contact</button>
-      <Counter/>
+     <ColourChanger/>
       </div>
   )
 }
