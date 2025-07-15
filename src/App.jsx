@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Counter from "./components/counter"
 import ColourChanger from "./components/ColourChanger"
+import ArrayIteration from "./components/ArrayIteration"
 
 const App = () => {
   const [title,setTitle]=useState("abhishek")
@@ -16,7 +17,8 @@ const App = () => {
   return (
     <div>
      {/* <ColourChanger/> */}
-     <Counter/>
+     {/* <Counter/> */}
+     <ArrayIteration/>
       </div>
   )
 }
