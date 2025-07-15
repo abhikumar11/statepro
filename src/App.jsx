@@ -15,7 +15,8 @@ const App = () => {
   }
   return (
     <div>
-     <ColourChanger/>
+     {/* <ColourChanger/> */}
+     <Counter/>
       </div>
   )
 }
