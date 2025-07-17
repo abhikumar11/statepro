@@ -6,7 +6,8 @@ const Person = () => {
   return (
     <div>
         {flag?"":<h1>Hide Me</h1>}
-        <button className="border p-2 rounded-2xl" onClick={()=>setFlag(!flag)}>Toggle Here</button>
+        <button className="border p-2 rounded-2xl" onClick={()=>setFlag(!flag)}>{flag?"Show":"Hide"}</button>
+        
     </div>
   )
 }
