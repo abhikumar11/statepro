@@ -3,6 +3,7 @@ import Counter from "./components/counter"
 import ColourChanger from "./components/ColourChanger"
 import ArrayIteration from "./components/ArrayIteration"
 import Person from "./components/Person"
+import LandingPage from "./components/LandingPage"
 
 const App = () => {
   const [title,setTitle]=useState("abhishek")
@@ -16,11 +17,15 @@ const App = () => {
     setAge(50);
   }
   return (
-    <div>
+    <div  style={{
+        height: '100vh',
+        
+      }}>
      {/* <ColourChanger/> */}
      {/* <Counter/> */}
      {/* <ArrayIteration/> */}
-     <Person/>
+     {/* <Person/> */}
+     <LandingPage/>
       </div>
   )
 }
