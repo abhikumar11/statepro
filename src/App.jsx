@@ -1,32 +1,17 @@
-import { useState } from "react"
-import Counter from "./components/counter"
-import ColourChanger from "./components/ColourChanger"
-import ArrayIteration from "./components/ArrayIteration"
-import Person from "./components/Person"
-import LandingPage from "./components/LandingPage"
+import { Route, Routes } from "react-router-dom"
+import Home from "./components/Home"
+import About from "./components/About"
 
 const App = () => {
-  const [title,setTitle]=useState("abhishek")
-  const [age,setAge]=useState(23)
-  const [contact,setContact]=useState(123456789)
-
-  const fun=()=>{
-    setTitle("vikas");
-  }
-  const fun2=()=>{
-    setAge(50);
-  }
   return (
-    <div  style={{
-        height: '100vh',
-        
-      }}>
-     {/* <ColourChanger/> */}
-     {/* <Counter/> */}
-     {/* <ArrayIteration/> */}
-     {/* <Person/> */}
-     <LandingPage/>
-      </div>
+
+    <div>
+        <h1>this is app page</h1>
+        <Routes>
+          <Route path="/home" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+        </Routes>
+    </div>
   )
 }
 
