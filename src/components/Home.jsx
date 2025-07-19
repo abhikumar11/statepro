@@ -5,11 +5,6 @@ const Home = () => {
   return (
     <div>
       <h1>This is home page</h1>
-      <ul>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-      </ul>
     </div>
   )
 }
