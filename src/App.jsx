@@ -6,6 +6,7 @@ import Services from "./components/Services"
 import Layout from "./components/Layout"
 import EffectState from "./components/EffectState"
 import FormHandling from "./components/FormHandling"
+import MultiForm from "./components/MultiForm"
 
 const App = () => {
   return (
@@ -27,7 +28,7 @@ const App = () => {
           </Route>
         </Routes> */}
         {/* <EffectState/> */}
-      <FormHandling/>
+      <MultiForm/>
     </div>
   )
 }
