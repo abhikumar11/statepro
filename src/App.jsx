@@ -5,6 +5,7 @@ import Contact from "./components/Contact"
 import Services from "./components/Services"
 import Layout from "./components/Layout"
 import EffectState from "./components/EffectState"
+import FormHandling from "./components/FormHandling"
 
 const App = () => {
   return (
@@ -25,7 +26,8 @@ const App = () => {
           <Route path="/services" element={<Services/>}/>
           </Route>
         </Routes> */}
-        <EffectState/>
+        {/* <EffectState/> */}
+      <FormHandling/>
     </div>
   )
 }
