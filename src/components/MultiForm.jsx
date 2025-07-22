@@ -31,12 +31,13 @@ const MultiForm = () => {
             <input type="number" name='phone' onChange={handleInput}/>
             <input type="submit" value="Submit"/>
         </form>
+        <div>
         <h1>{frmData.name}</h1>
         <h1>{frmData.age}</h1>
         <h1>{frmData.email}</h1>
         <h1>{frmData.city}</h1>
         <h1>{frmData.phone}</h1>
-
+    </div>
     </div>
   )
 }
