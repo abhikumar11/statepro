@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 const LocalForm = () => {
     const [frmData,setFrmData]=useState({username:"",email:"",password:""})
+    const [data,setData]=useState({})
     const handleInput=(e)=>{
             const {name,value}=e.target;
             setFrmData({...frmData,[name]:value});
@@ -10,9 +11,14 @@ const LocalForm = () => {
             e.preventDefault();
             localStorage.setItem("userdata",JSON.stringify(frmData));
     }
+    const fetchData=()=>{
+      const user=JSON.parse(localStorage.getItem("userdata"));
+      setData(user);
+    }
   return (
     <div>
         <h1>Sign Up</h1>
+        <div>
         <form onSubmit={handleSubmit}>
            <label htmlFor="">Username</label>
            <input type='text'  name='username' onChange={handleInput}/>
@@ -25,8 +31,17 @@ const LocalForm = () => {
            <br/><br/>
            <input type='submit' value="Sign Up" onChange={handleInput}/>
         </form>
-        <br/><br/>
-        <button>Get Data</button>
+        </div>
+        <br/>
+        <div>
+        <button onClick={fetchData}>Get Data</button>
+        <h1>Your Details</h1>
+        <div>
+          <p>Name: {data.username}</p>
+          <p>Email: {data.email}</p>
+          <p>Password: {data.password}</p>
+        </div>
+      </div>
     </div>
   )
 }
