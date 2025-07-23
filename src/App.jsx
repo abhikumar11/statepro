@@ -7,6 +7,7 @@ import Layout from "./components/Layout"
 import EffectState from "./components/EffectState"
 import FormHandling from "./components/FormHandling"
 import MultiForm from "./components/MultiForm"
+import LocalForm from "./components/LocalForm"
 
 const App = () => {
   return (
@@ -28,7 +29,8 @@ const App = () => {
           </Route>
         </Routes> */}
         {/* <EffectState/> */}
-      <MultiForm/>
+      {/* <MultiForm/> */}
+      <LocalForm/>
     </div>
   )
 }
