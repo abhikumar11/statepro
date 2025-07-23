@@ -25,6 +25,8 @@ const LocalForm = () => {
            <br/><br/>
            <input type='submit' value="Sign Up" onChange={handleInput}/>
         </form>
+        <br/><br/>
+        <button>Get Data</button>
     </div>
   )
 }
