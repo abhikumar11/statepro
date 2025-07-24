@@ -14,7 +14,7 @@ const LocalShow = () => {
         <div>
           <p>Name: {data.username}</p>
           <p>Email: {data.email}</p>
-          <p>Password: {data.password}</p>
+          <p>Password: {data.password}</p>   
         </div>
       </div>
   )
