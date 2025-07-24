@@ -60,7 +60,7 @@ const LocalForm = () => {
           />
         </form>
       </div>
-      <br />
+      <hr/>
       <div>
         <button onClick={fetchData}>Get Data</button>
         <h1>Your Details</h1>
