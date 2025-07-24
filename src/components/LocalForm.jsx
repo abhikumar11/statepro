@@ -1,39 +1,67 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
 const LocalForm = () => {
-    const [frmData,setFrmData]=useState({username:"",email:"",password:""})
-    const [data,setData]=useState({})
-    const handleInput=(e)=>{
-            const {name,value}=e.target;
-            setFrmData({...frmData,[name]:value});
-    }
-    const handleSubmit=(e)=>{
-            e.preventDefault();
-            localStorage.setItem("userdata",JSON.stringify(frmData));
-    }
-    const fetchData=()=>{
-      const user=JSON.parse(localStorage.getItem("userdata"));
-      setData(user);
-    }
+  const [frmData, setFrmData] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+
+  const [data, setData] = useState({});
+
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    setFrmData({ ...frmData, [name]: value });
+  };
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem("userdata", JSON.stringify(frmData));
+  };
+
+  const fetchData = () => {
+    const user = JSON.parse(localStorage.getItem("userdata"));
+    setData(user);
+  };
+
   return (
     <div>
-        <h1>Sign Up</h1>
-        <div>
+      <h1>Sign Up</h1>
+      <div>
         <form onSubmit={handleSubmit}>
-           <label htmlFor="">Username</label>
-           <input type='text'  name='username' onChange={handleInput}/>
-           <br/><br/>
-            <label htmlFor="">Email</label>
-           <input type='email' name='email' onChange={handleInput}/>
-           <br/><br/>
-            <label htmlFor="">Password</label>
-           <input type='password' name='password' onChange={handleInput}/>
-           <br/><br/>
-           <input type='submit' value="Sign Up" onChange={handleInput}/>
+          <label htmlFor="">Username</label>
+          <input
+            type="text"
+            name="username"
+            onChange={handleInput}
+          />
+          <br />
+          <br />
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            name="email"
+            onChange={handleInput}
+          />
+          <br />
+          <br />
+          <label htmlFor="">Password</label>
+          <input
+            type="password"
+            name="password"
+            onChange={handleInput}
+          />
+          <br />
+          <br />
+          <input
+            type="submit"
+            value="Sign Up"
+            onChange={handleInput}
+          />
         </form>
-        </div>
-        <br/>
-        <div>
+      </div>
+      <br />
+      <div>
         <button onClick={fetchData}>Get Data</button>
         <h1>Your Details</h1>
         <div>
@@ -43,7 +71,7 @@ const LocalForm = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LocalForm
+export default LocalForm;
