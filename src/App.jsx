@@ -8,6 +8,7 @@ import EffectState from "./components/EffectState"
 import FormHandling from "./components/FormHandling"
 import MultiForm from "./components/MultiForm"
 import LocalForm from "./components/LocalForm"
+import LocalShow from "./components/LocalShow"
 
 const App = () => {
   return (
@@ -30,7 +31,11 @@ const App = () => {
         </Routes> */}
         {/* <EffectState/> */}
       {/* <MultiForm/> */}
-      <LocalForm/>
+      <Routes>
+        <Route index element={<LocalForm/>}/>
+        <Route path="/show" element={<LocalShow/>}/>
+      </Routes>
+      
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LocalForm = () => {
   const [frmData, setFrmData] = useState({
@@ -8,6 +9,7 @@ const LocalForm = () => {
   });
 
   const [data, setData] = useState({});
+  let navigate=useNavigate();
 
   const handleInput = (e) => {
     const { name, value } = e.target;
@@ -17,6 +19,7 @@ const LocalForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem("userdata", JSON.stringify(frmData));
+      navigate("/show");
   };
 
   const fetchData = () => {
